@@ -5,7 +5,7 @@ function Home() {
   const [data,setData] = useState([])
   const fetchData = async () => {
     try {
-      const url = `https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics&chart=mostPopular&regionCode=US&key=${conf.youtubeApiKey}&maxResults=1000`
+      const url = `https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics&chart=mostPopular&regionCode=IN&key=${conf.youtubeApiKey}&maxResults=1000`
       const response = await fetch(url)
       const responseData = await response.json()
       setData(responseData.items)
