@@ -9,45 +9,45 @@ import { TextContext } from "./context/TextContext";
 
 function App() {
   // const [user , setUser] =  useState(null)
-  const {user, setUser} =  useContext(TextContext)
-  useEffect(() => {
-    const checkUser =  async () =>{
-      try {
-        const userData =  await getUser()
-        setUser(userData)
-      } catch (error) {
-        setUser(null)
-      }
-    }
-    checkUser()
-  },[])
+  // const {user, setUser} =  useContext(TextContext)
+  // useEffect(() => {
+  //   const checkUser =  async () =>{
+  //     try {
+  //       const userData =  await getUser()
+  //       setUser(userData)
+  //     } catch (error) {
+  //       setUser(null)
+  //     }
+  //   }
+  //   checkUser()
+  // },[])
   return (
-    // <div>
-    //   <Header />
-    //   <SideBar />
-    //   <div className=" md:ml-28 xl:ml-60">
-    //     <div className="h-20" />
-    //     <Outlet />
-    //   </div>
-    //   <BottomNavigation />
-    // </div>
-
-
     <div>
-     {
-      user ? (
-        <>
-         <p>Welcome, {user.name}!</p>
-          <img src={user.avatar} alt="" />
-          <button onClick={logoutUser}>Logout</button>
-        </>
-      ) : (
-        <>
-          <button onClick={loginWithGoogle}>Login with Google</button>
-        </>
-      )
-     }
+      <Header />
+      <SideBar />
+      <div className=" md:ml-28 xl:ml-60">
+        <div className="h-20" />
+        <Outlet />
+      </div>
+      <BottomNavigation />
     </div>
+
+
+    // <div>
+    //  {
+    //   user ? (
+    //     <>
+    //      <p>Welcome, {user.name}!</p>
+    //       <img src={user.avatar} alt="" />
+    //       <button onClick={logoutUser}>Logout</button>
+    //     </>
+    //   ) : (
+    //     <>
+    //       <button onClick={loginWithGoogle}>Login with Google</button>
+    //     </>
+    //   )
+    //  }
+    // </div>
   )
 }
 
