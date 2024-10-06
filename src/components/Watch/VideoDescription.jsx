@@ -3,6 +3,7 @@ import {
   useChannelDetail,
   useSubscriberCount,
 } from "../../custom-hooks/useFetchData";
+import { Link } from "react-router-dom";
 function VideoDescription({ details }) {
   const { data, channelDeatil, setData } = useChannelDetail();
   const { count, subscriberCount } = useSubscriberCount();
@@ -38,7 +39,7 @@ function VideoDescription({ details }) {
   console.log(formattedSubsCount);
 
   return (
-    <div className="px-3 mt-2">
+    <Link to={`/channel/${channelId}`} className="px-3 mt-2">
       <h3 className="font-semibold  text-xl mb-2">{videoTitle}</h3>
       <div className="flex items-center gap-1">
         <img
@@ -51,7 +52,7 @@ function VideoDescription({ details }) {
           <p className="text-sm ">{formattedSubsCount} Subscribers</p>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
