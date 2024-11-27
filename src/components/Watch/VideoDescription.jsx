@@ -39,7 +39,7 @@ function VideoDescription({ details }) {
   console.log(formattedSubsCount);
 
   return (
-    <Link to={`/channel/${channelId}`} className="px-3 mt-2">
+    <div className="px-3 mt-2">
       <h3 className="font-semibold  text-xl mb-2">{videoTitle}</h3>
       <div className="flex items-center gap-1">
         <img
@@ -52,7 +52,7 @@ function VideoDescription({ details }) {
           <p className="text-sm ">{formattedSubsCount} Subscribers</p>
         </div>
       </div>
-    </Link>
+    </div>
   );
 }
 
