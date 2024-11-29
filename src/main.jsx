@@ -13,7 +13,6 @@ import Home from "./pages/Home.jsx";
 import Watch from "./pages/Watch.jsx";
 import SearchResult from "./pages/SearchResult.jsx";
 import TextProvider from "./context/TextContext.jsx";
-import Channel from "./pages/Channel.jsx";
 import { CameraEnhanceOutlined } from "@mui/icons-material";
 
 const router = createBrowserRouter(
@@ -22,7 +21,6 @@ const router = createBrowserRouter(
       <Route index element={<Home />} />
       <Route path="search" element={<SearchResult />} />
       <Route path="watch/:id" element={<Watch />} />
-      <Route path="channel/:id" element={<Channel />} />
     </Route>
   )
 );
